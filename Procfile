@@ -1,1 +1,0 @@
-web: gunicorn adote_um_pet.wsgi
