@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 from pickle import APPEND
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-3$nlnsrprlyx9jn=c6a2665@xgi80i+39*no)z8*ja)^e5yy1j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://adote-um-pet-2022.herokuapp.com/']
 
 
 # Application definition
@@ -139,3 +140,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "adote.pets2022@gmail.com"
 EMAIL_HOST_PASSWORD = "gjccngadybupaptt"
+
+django_heroku.settings(locals())
